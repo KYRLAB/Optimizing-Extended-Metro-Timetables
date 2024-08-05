@@ -12,7 +12,7 @@ The process of code organization and refactoring is underway. Key changes includ
 - Included example code
 
 ## Timeline
-Expected completion and upload date: **Sep 29, 2024**
+Expected completion and upload date: **Aug 12, 2024**
 
 ## Contribution
 Please feel free to submit Pull Requests. Bug reports and feature requests can be submitted through the Issues section.
