@@ -2,7 +2,7 @@
 
 This repository is Implementation of Paper: "Optimizing Extended Metro Timetables During Year-End Events Using Graph Neural Networks: A Study on Passenger Flow Prediction and Timetable Optimization".
 
-## Requirements and Dependencies904
+## Requirements and Dependencies
 
 * **OS**: Ubuntu 22.04.3 LTS
 * **Python**: python 3.10.12
