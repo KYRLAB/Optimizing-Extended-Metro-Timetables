@@ -27,8 +27,9 @@ We collect three kinds of data: metro ridership counts for Seoul and Busan, week
 
 ### Download datasets
 
-- The Seoul metro ridership data provided by the [Seoul Open Data Plaza](https://data.seoul.go.kr/dataList/OA-12921/F/1/datasetView.do).
+- The Seoul metro ridership data provided by the [Seoul Open Data Plaza](https://data.seoul.go.kr/dataList/OA-12921/F/1/datasetView.do). 
 - The Busan metro ridership data provided by the [Open Government Data portal](https://www.data.go.kr/data/3057229/fileData.do). 
+- The Seoul and Busan metro timetables provided by the [SEOUL METRO Official Website](http://www.seoulmetro.co.kr/en) and [Busan Transportation Coporation Official Website](https://www.humetro.busan.kr), repectively.
 
 ### Folder structure
 
@@ -67,26 +68,31 @@ usage: main.py [-h] [--dataset DATASET] [--station_index STATION_INDEX]
 
 The detailed descriptions about the hyperparameters are as following:
 
-| Parameter name         | Description of parameter                          |
-| ---------------------- | ------------------------------------------------- |
-| dataset                | file name of input csv                            |
-| station_index          | index of station to specify                       |
-| window_size            | length of sliding window                          |
-| horizon                | predict horizon                                   |
-| valid_ratio            | ratio of validation                               |
-| epoch                  | size of epoch                                     |
-| lr                     | learning rate                                     |
-| multi_layer            | number of hidden layers for StemGNN               |
-| device                 | device on which the code works (cpu or cuda)      |
-| validate_freq          | frequency of check status                         |
-| batch_size             | batch size for data loader                        |
-| norm_method            | method for normalization ('z_score' or 'min_max') |
-| early_stop             | enable early stop while training                  |
-| early_stop_step        | step size of early stop                           |
-| exponential_decay_step | step of reducing learning rate                    |
-| decay_rate             | percentage of reduce learning rate                |
-| dropout_rate           | percentage of drop out                            |
-| leakyrelu_rate         | slope for Leaky ReLU activation                   |
+| Parameter name         | Description of parameter                                     |
+| ---------------------- | ------------------------------------------------------------ |
+| dataset                | file name of input csv                                       |
+| station_index          | index of station to specify                                  |
+| num_samples            | number of samples used for Monte Carlo simulation            |
+| num_train              | number of total trains deployed                              |
+| passenger_flow         | total number of predicted passengers for the respective metro line |
+| fixed_timetable        | timestamp in the timetable where changes are not considered  |
+| peak_time              | expected peak time where anticipated passengers are the highest |
+| window_size            | length of sliding window                                     |
+| horizon                | predict horizon                                              |
+| valid_ratio            | ratio of validation                                          |
+| epoch                  | size of epoch                                                |
+| lr                     | learning rate                                                |
+| multi_layer            | number of hidden layers for StemGNN                          |
+| device                 | device on which the code works ('cpu' or 'cuda')             |
+| validate_freq          | frequency of validation check                                |
+| batch_size             | batch size for data loader                                   |
+| norm_method            | method for normalization ('z_score' or 'min_max')            |
+| early_stop             | enable early stop while training                             |
+| early_stop_step        | step size of early stop                                      |
+| exponential_decay_step | step of learning rate decay for each epoch                   |
+| decay_rate             | percentage of reduce learning rate                           |
+| dropout_rate           | percentage of drop out                                       |
+| leakyrelu_rate         | slope for Leaky ReLU activation                              |
 
 ## Result
 
