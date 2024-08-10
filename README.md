@@ -10,7 +10,7 @@ This repository is Implementation of Paper: "Optimizing Extended Metro Timetable
 
 Download repository:
 
-```setup
+```
 $ git clone https://github.com/KYRLAB/Optimizing-Extended-Metro-Timetables.git
 ```
 
@@ -71,17 +71,17 @@ The detailed descriptions about the hyperparameters are as following:
 | ---------------------- | ------------------------------------------------- |
 | dataset                | file name of input csv                            |
 | station_index          | index of station to specify                       |
-| window_size            | length of sliding window, default 12              |
-| horizon                | predict horizon, default 3                        |
-| valid_ratio            | ratio of validation from actual data, default 2   |
+| window_size            | length of sliding window                          |
+| horizon                | predict horizon                                   |
+| valid_ratio            | ratio of validation                               |
 | epoch                  | size of epoch                                     |
 | lr                     | learning rate                                     |
 | multi_layer            | number of hidden layers for StemGNN               |
-| device                 | device on which the code works  'cpu' or 'cuda:x' |
+| device                 | device on which the code works (cpu or cuda)      |
 | validate_freq          | frequency of check status                         |
 | batch_size             | batch size for data loader                        |
-| norm_method            | method for normalization, 'z_score' or 'min_max'  |
-| early_stop             | enable early stop while training (default False)  |
+| norm_method            | method for normalization ('z_score' or 'min_max') |
+| early_stop             | enable early stop while training                  |
 | early_stop_step        | step size of early stop                           |
 | exponential_decay_step | step of reducing learning rate                    |
 | decay_rate             | percentage of reduce learning rate                |
@@ -94,7 +94,11 @@ Source of original paper results:
 
   Timetable of Line 1 Jongno-3ga station for down tracks under each scenario: original, partially optimized, and fully optimized. The blue dashed lines represent the optimized timetable, and the red lines represent the fixed timetable.
 
-![result](./assets/result.png)
+![result_sample](./assets/result_sample.png)
+
+  Plot of all results from the Monte Carlo simulation for Seoul Metro lines 1–6 and 8, as well as Busan Metro lines 1 and 2. The first three columns represent the down-bound track: the first column shows the original timetable, the second shows the partially optimized timetable, and the third shows the fully optimized timetable. The last three columns represent the same timetables, but for the up-bound track.
+
+![result_all](./assets/result_all.png)
 
 ## Citation
 
