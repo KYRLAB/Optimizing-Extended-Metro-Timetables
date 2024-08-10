@@ -29,7 +29,7 @@ We collect three kinds of data: metro ridership counts for Seoul and Busan, week
 
 - The Seoul metro ridership data provided by the [Seoul Open Data Plaza](https://data.seoul.go.kr/dataList/OA-12921/F/1/datasetView.do). 
 - The Busan metro ridership data provided by the [Open Government Data portal](https://www.data.go.kr/data/3057229/fileData.do). 
-- The Seoul and Busan metro timetables provided by the [SEOUL METRO Official Website](http://www.seoulmetro.co.kr/en) and [Busan Transportation Coporation Official Website](https://www.humetro.busan.kr), repectively.
+- The Seoul and Busan metro timetables provided by the [SEOUL METRO Official Website](http://www.seoulmetro.co.kr/en) and [Busan Transportation Coporation Official Website](https://www.humetro.busan.kr), respectively.
 
 ### Folder structure
 
