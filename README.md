@@ -55,6 +55,9 @@ The training procedure and the inference procedure are included in `main.py`. To
 
 ```
 usage: main.py [-h] [--dataset DATASET] [--station_index STATION_INDEX]
+               [--num_samples NUM_SAMPLES] [--num_train NUM_TRAIN]
+               [--passenger_flow PASSENGER_FLOW] [--peak_time PEAK_TIME]
+               [--fixed_timetable FIXED_TIMETABLE]
                [--window_size WINDOW_SIZE] [--horizon HORIZON]
                [--valid_ratio VALID_RATIO] [--epoch EPOCH] [--lr LR]
                [--multi_layer MULTI_LAYER] [--device DEVICE]
@@ -75,8 +78,8 @@ The detailed descriptions about the hyperparameters are as following:
 | num_samples            | number of samples used for Monte Carlo simulation            |
 | num_train              | number of total trains deployed                              |
 | passenger_flow         | total number of predicted passengers for the respective metro line |
-| fixed_timetable        | timestamp in the timetable where changes are not considered  |
 | peak_time              | expected peak time where anticipated passengers are the highest |
+| fixed_timetable        | timestamp in the timetable where changes are not considered  |
 | window_size            | length of sliding window                                     |
 | horizon                | predict horizon                                              |
 | valid_ratio            | ratio of validation                                          |
